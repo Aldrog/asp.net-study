@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
 
-namespace Study.Controllers
+namespace Main.Controllers
 {
     public class HomeController : Controller
     {
@@ -17,6 +17,11 @@ namespace Study.Controllers
             ViewData ["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
             ViewData ["Runtime"] = isMono ? "Mono" : ".NET";
 
+            return View ();
+        }
+
+        public ActionResult Survey ()
+        {
             return View ();
         }
     }
