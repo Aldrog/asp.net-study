@@ -12,5 +12,12 @@ namespace Main.Controllers
         {
             return View ();
         }
+
+        [HttpPost]
+        public ActionResult ProcessForm(string opinion)
+        {
+            ViewBag.SurveyResult = opinion; //Request.Params ["opinion"];
+            return View ("FormProcessed");
+        }
     }
 }

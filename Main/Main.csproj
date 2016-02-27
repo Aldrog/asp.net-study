@@ -86,6 +86,7 @@
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <Content Include="Views\Survey\Index.cshtml" />
+    <Content Include="Views\Survey\FormProcessed.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
