@@ -19,11 +19,6 @@ namespace Main.Controllers
 
             return View ();
         }
-
-        public ActionResult Survey ()
-        {
-            return View ();
-        }
     }
 }
 
