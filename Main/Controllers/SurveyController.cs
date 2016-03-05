@@ -8,6 +8,8 @@ namespace Main.Controllers
 {
     public class SurveyController : Controller
     {
+        private List<string> results;
+
         public ActionResult Index()
         {
             return View ();
@@ -16,7 +18,7 @@ namespace Main.Controllers
         [HttpPost]
         public ActionResult ProcessForm(string opinion)
         {
-            ViewBag.SurveyResult = opinion; //Request.Params ["opinion"];
+            results.Add (opinion);
             return View ("FormProcessed");
         }
     }
