@@ -1,3 +1,15 @@
-﻿<h2>Welcome to ASP.NET MVC @ViewData["Version"] on @ViewData["Runtime"]!</h2>
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome!</title>
+</head>
+<body>
+<h2>Welcome to the Global Psychological Testing Program!</h2>
 <button id="interviewBtn" onclick="window.location='@Url.Action("Survey")'">Get me to the survey!</button>
 <button id="showResults" onclick="window.location='@Url.Action("ResultTable")'">Show survey results</button>
+</body>
+</html>
