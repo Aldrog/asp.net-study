@@ -9,7 +9,7 @@ namespace Main.Controllers
 {
     public class HomeController : Controller
     {
-        private List<string> results;
+        static SurveyResults results;
 
         public ActionResult Index ()
         {
@@ -29,19 +29,18 @@ namespace Main.Controllers
 
         public ActionResult ResultTable()
         {
+            Console.WriteLine (results);
             if (results == null)
-                results = new List<string> ();
-            results.Add ("test");
-            ViewData ["resultList"] = results;
-            return View ();
+                results = new SurveyResults ();
+            return View (results);
         }
 
         [HttpPost]
         public ActionResult ProcessForm(string opinion)
         {
             if (results == null)
-                results = new List<string> ();
-            results.Add (opinion);
+                results = new SurveyResults ();
+            results.Data.Add (opinion);
             return View ("FormProcessed");
         }
     }
