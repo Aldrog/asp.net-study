@@ -1,4 +1,4 @@
-﻿@model Main.SurveyResults
+﻿@model Main.SurveyData
 
 @{
     Layout = null;
@@ -11,9 +11,15 @@
 </head>
 <body>
 <h1>Survey Results:</h1>
+<table cellpadding=5 cellspacing=5>
 @foreach(var r in Model.Data) {
-<div>@r</div>
+    <tr>
+        <td>
+            @r.answer
+        </td>
+    </tr>
 }
+</table>
 <br/>
 <button id="back" onclick="window.location='@Url.Action("Index")'">Go back</button>
 </body>

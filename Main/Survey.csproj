@@ -73,7 +73,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\SurveyResults.cs" />
+    <Compile Include="Models\SurveyResult.cs" />
+    <Compile Include="Models\SurveyData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />

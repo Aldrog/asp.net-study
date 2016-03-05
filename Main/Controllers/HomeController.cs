@@ -9,7 +9,7 @@ namespace Main.Controllers
 {
     public class HomeController : Controller
     {
-        static SurveyResults results;
+        static SurveyData results;
 
         public ActionResult Index ()
         {
@@ -25,7 +25,7 @@ namespace Main.Controllers
         {
             Console.WriteLine (results);
             if (results == null)
-                results = new SurveyResults ();
+                results = new SurveyData ();
             return View (results);
         }
 
@@ -33,8 +33,8 @@ namespace Main.Controllers
         public ActionResult ProcessForm(string opinion)
         {
             if (results == null)
-                results = new SurveyResults ();
-            results.Data.Add (opinion);
+                results = new SurveyData ();
+            results.Data.Add (new SurveyResult(opinion));
             return View ("FormProcessed");
         }
     }
