@@ -17,7 +17,7 @@ namespace Main
             routes.MapRoute (
                 "Survey",
                 "best/route/ever",
-                new { controller = "Survey", action = "Index", id = "" }
+                new { controller = "Home", action = "Survey", id = "" }
             );
 
             routes.MapRoute (
